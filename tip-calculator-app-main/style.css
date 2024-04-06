@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space mono';
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: hsl(185, 41%, 84%);
+}
+
+h2,
+h3 {
+  font-size: 1.3rem;
+  color: hsl(183, 100%, 15%);
+  letter-spacing: 0.5rem;
+}
+
+p {
+  color: hsl(183, 100%, 15%);
+}
+
+.container {
+  margin-top: 4rem;
+  width: 60%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputs {
+  margin: 1.8rem;
+  width: 40%;
+}
+
+.amounts {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: (0, 0%, 100%);
+  filter: brightness(0.9);
+  text-align: end;
+  font-size: 1.2rem;
+  color: hsl(183, 100%, 15%);
+}
+
+input:active {
+  border: 2px solid hsl(172, 67%, 45%);
+  color: black;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.percent {
+  margin-block: 2rem;
+}
+
+.tip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.btn {
+  color: white;
+  background: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn:active {
+  background: hsl(172, 67%, 45%);
+  color: black;
+}
+
+.custom {
+  background: hsl(172, 67%, 45%);
+  filter: contrast(0.4);
+  color: hsl(183, 100%, 15%);
+}
+
+#custom:active {
+  border: 2px solid hsl(172, 67%, 45%);
+  color: black;
+}
+
+.amount {
+  width: 60%;
+  margin: 2rem;
+  background: hsl(183, 100%, 15%);
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.amount p {
+  color: white;
+}
+
+.calc {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.tip-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark {
+  opacity: 0.4;
+  font-size: 0.9rem;
+}
+
+span {
+  font-size: 2rem;
+  color: hsl(172, 67%, 45%);
+}
+
+.reset {
+  width: 90%;
+  margin: 0 1.5rem 0 1.5rem;
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 0.3rem;
+  background: hsl(172, 67%, 45%);
+  color: black;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.reset:active {
+  filter: brightness(2);
+  font-weight: 900;
+}
+
+@media (max-width: 1204px) {
+  h2 {
+    margin-block-start: 2rem;
+  }
+  body {
+    height: 100%;
+  }
+  .container {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .inputs {
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+  }
+
+  .percent p {
+    margin-block-end: 1rem;
+  }
+
+  .tip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .amount {
+    width: 90%;
+    margin: auto auto 2rem auto;
+  }
+
+  .reset {
+    margin: 0 1rem 1rem 1rem;
+  }
+}
